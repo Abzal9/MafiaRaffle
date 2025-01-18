@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт для раздачи ролей в Мафии</title>
-    <meta name="description" content='Множество ведущих стало встречать множество запаров и проблем с раздачей ролей в такой игре как Мафия. Данный сайт является спасателем от таких ситуации. Получай роли для нескольких или менее участников и проводи мафию чаще с весельем!'/> 
+    <meta name="description" content='Множество ведущих стало встречать множество запаров и проблем с раздачей ролей в такой игре как Мафия. Данный сайт является спасателем от таких ситуации. Получай роли для нескольких или менее участников и проводи мафию чаще с весельем!'/>
     <meta name="keywords" content="Мафия, Раздача ролей мафия, Раздача ролей в мафии онлайн, Раздача ролей в мафии без регистрации, Мафия раздать роли." />
     <meta name="author" content="golub-designer" />
     <meta name="publisher-email" content="golub-designer@gmail.com" />
@@ -39,23 +39,6 @@
             background-color: #40407a;
             color: #ffffff;
         }
-
-        .help-pannel {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 20px;
-            width: 250px;
-        }
-
-        .help-form-name {
-            margin-right: 10px;
-        }
-
-        .dropdown-menu {
-            position: relative;
-            z-index: 10;
-        }
     </style>
 </head>
 <body class="light-theme">
@@ -83,24 +66,24 @@
         <br>
     </div>
     <div class="help-pannel hiden ">
-        <div class="d-flex">
-            <button type="button" class="btn btn-danger dropdown-toggle user-form help-form-name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="help-role-pole">
-                Мафия
-            </button>
-            <input type="text" class="form-control user-form help-form-name" required placeholder="Номер" id="help-name-pole">
-        </div>
+        <input type="text" class="form-control user-form help-form-name" required placeholder="Номер" id="help-name-pole">
         <button type="button" class="btn btn-outline-success button-plus-user">+</button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Мафия</a>
-            <a class="dropdown-item" href="#">Маньяк</a>
-            <a class="dropdown-item" href="#">Комиссар</a>
-            <a class="dropdown-item" href="#">Доктор</a>
-            <a class="dropdown-item" href="#">Шериф</a>
-            <a class="dropdown-item" href="#">Бабочка</a>
-            <a class="dropdown-item" href="#">Якудза</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">МЖ</a>
-        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle user-form help-form-name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="help-role-pole">
+              Мафия
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Мафия</a>
+              <a class="dropdown-item" href="#">Маньяк</a>
+              <a class="dropdown-item" href="#">Комиссар</a>
+              <a class="dropdown-item" href="#">Доктор</a>
+              <a class="dropdown-item" href="#">Шериф</a>
+              <a class="dropdown-item" href="#">Бабочка</a>
+              <a class="dropdown-item" href="#">Якудза</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">МЖ</a>
+            </div>
+          </div>
         <p class="help-pannel-roles"></p>
     </div>
     <button type="button" class="btn btn-warning button-help">Помощник Ведущему</button>
