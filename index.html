@@ -1,117 +1,35 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт для раздачи ролей в Мафии</title>
-    <meta name="description" content='Множество ведущих стало встречать множество запаров и проблем с раздачей ролей в такой игре как Мафия. Данный сайт является спасателем от таких ситуации. Получай роли для нескольких или менее участников и проводи мафию чаще с весельем!'/>
-    <meta name="keywords" content="Мафия, Раздача ролей мафия, Раздача ролей в мафии онлайн, Раздача ролей в мафии без регистрации, Мафия раздать роли." />
-    <meta name="author" content="golub-designer" />
-    <meta name="publisher-email" content="golub-designer@gmail.com" />
-    <meta name="who-expanded-site" content="amynanel" />
-    <meta name="robots" content="index, follow" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Game Roles Assistant</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        body.light-theme {
-            background-color: #ffffff;
-            color: #212529;
-        }
-
-        body.dark-theme {
-            background-color: #2c2c54;
-            color: #ffffff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-            background-color: #f1f1f1;
-            color: #212529;
-        }
-
-        body.dark-theme footer {
-            background-color: #40407a;
-            color: #ffffff;
-        }
-    </style>
 </head>
-<body class="light-theme">
-    <div class="form-row">  
-        <div class="col-1">
-          <input type="number" class="form-control user-form" id="user-form" placeholder="5" required>
-        </div>
+<body>
+    <div class="container">
+        <button id="redButton">Мафия</button>
+        <input type="text" id="numberInput" placeholder="Enter number">
     </div>
-    <div class="settings hiden">
-        <ul><li><label>Мафия</label><input type="number" class="form-control user-form mafia mafia-new" placeholder="5" required></li></ul>
-        <br>
-        <ul><li>Мирные жители<input type="number" class="form-control user-form people mafia-new" placeholder="5"></li></ul>
-        <br>
-        <ul><li>Маньяк<input type="checkbox" class="manjak"></li></ul>
-        <br>
-        <ul><li>Комиссар<input type="checkbox" class="komisar"></li></ul>
-        <br>
-        <ul><li>Доктор<input type="checkbox" class="doctor"></li></ul>
-        <br>
-        <ul><li>Шериф<input type="checkbox" class="sherif"></li></ul> 
-        <br>
-        <ul><li>Бабочка<input type="checkbox" class="babochka"></li></ul>
-        <br>
-        <ul><li>Якудза<input type="checkbox" class="jakudza"></li></ul>
-        <br>
-    </div>
-    <div class="help-pannel hiden ">
-        <input type="text" class="form-control user-form help-form-name" required placeholder="Номер" id="help-name-pole">
-        <button type="button" class="btn btn-outline-success button-plus-user">+</button>
-        <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle user-form help-form-name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="help-role-pole">
-              Мафия
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Мафия</a>
-              <a class="dropdown-item" href="#">Маньяк</a>
-              <a class="dropdown-item" href="#">Комиссар</a>
-              <a class="dropdown-item" href="#">Доктор</a>
-              <a class="dropdown-item" href="#">Шериф</a>
-              <a class="dropdown-item" href="#">Бабочка</a>
-              <a class="dropdown-item" href="#">Якудза</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">МЖ</a>
-            </div>
-          </div>
-        <p class="help-pannel-roles"></p>
-    </div>
-    <button type="button" class="btn btn-warning button-help">Помощник Ведущему</button>
-    <br>
-    <button type="button" class="btn btn-dark button-action">Настроить вручную</button>
-    <br>
-    <button type="button" class="btn btn-primary action">Получить роли</button>
-    <br>
-    <button type="button" class="btn btn-secondary" id="theme-toggle">Сменить тему</button>
-    <p class="auto-p"></p>
-    <footer style="text-align: center; margin-top: 20px;">
-        <p>Создатель сайта: <a href="https://github.com/golub-designer" target="_blank">golub-designer</a></p>
-        <p>Создатель измененной версии рандомайзера: Amynanel ; Discord: amynanel809 ; Telegram: Amynanel15013</p>
-        <p>Спонсор и поддержка от комьюнити: <a href="https://discord.gg/verkuti" target="_blank">Discord: RAICORE</a> </p>
-    </footer>
-    <!-- scripts -->
-    <script>
-        const themeToggleButton = document.getElementById('theme-toggle');
-        const body = document.body;
 
-        themeToggleButton.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            body.classList.toggle('light-theme');
-        });
-    </script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0IEjwBvKU7imGFAV0wwj1yfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <div id="roleList" class="hidden">
+        <ul>
+            <li>Мафия</li>
+            <li>Мирный житель</li>
+            <li>Доктор</li>
+            <li>Комиссар</li>
+            <li>Шериф</li>
+            <li>Маньяк</li>
+            <li>Бабочка</li>
+            <li>Якудза</li>
+        </ul>
+    </div>
+
+    <div class="bottomButtons">
+        <button id="yellowButton">Yellow Button</button>
+        <button id="blueButton">Blue Button</button>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
