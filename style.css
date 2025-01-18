@@ -1,66 +1,130 @@
+/* Основные стили */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+body.dark-theme {
+    background-color: #2c2c54;
+    color: #ffffff;
+}
+
+/* Стили для кнопок */
 button {
-    margin: 10px;
-    /* padding: 8px; */
-    width: 225px;
+    margin-top: 10px;
 }
-.user-form {
-    width: 220px;
+
+button:focus {
+    outline: none;
 }
-#user-form {    
-    margin: 10px;
+
+button:hover {
+    background-color: #0056b3;
 }
-p {
-    margin: 10px;
+
+/* Стили для панели помощи */
+.help-pannel {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }
+
+.help-pannel-roles {
+    margin-top: 10px;
+}
+
+.help-pannel input {
+    width: auto;
+    margin-right: 10px;
+}
+
+button.button-plus-user {
+    margin-top: 10px;
+}
+
+button.button-help {
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+
+/* Стили для выпадающего списка ролей */
+.dropdown-menu {
+    position: absolute;
+    right: 10px;
+    top: 150px;
+}
+
+/* Стили для блокировки при открытии панели */
 .hiden {
     display: none;
 }
-.flex-row {
-    display: flex;
-    flex-direction: row;
+
+/* Стили для темы */
+body.dark-theme footer {
+    background-color: #40407a;
+    color: #ffffff;
 }
-.mafia-new{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: -15px;
-}
-.btn-group li {
-    margin-left: 5px;
-}
-input[type = "checkbox"] {
-    margin: 5px;
-}
-label {
-    margin-top: 6px;
-}
-.button-plus-user {
-    margin-top: 3px;
-    width: 35px;
-}
+
+/* Стили для поля ввода номера */
 .help-form-name {
-    margin: 0px;
-    width: 85px;
-    position: absolute;
-        top: 75px;
-        left: 48px;
+    display: inline-block;
+    margin-left: 10px;
 }
-#help-role-pole {
-    width: 100px;
-    position: absolute;
-        top: -23px;
-        left: 76px;
+
+/* Стили для элементов в панели */
+.help-pannel input[type="text"] {
+    width: 150px;
 }
-/* .hiden_2 {
-    visibility: hidden;
-} */
-.logo-navbar {
-    width: 40px;
-    transition: 1s;
+
+/* Стили для блока с ролями */
+button.btn-dark {
+    margin-top: 10px;
 }
-.logo-navbar:hover {
-    transition: 1s;
-    transform: rotate(360deg)
+
+button.action {
+    margin-top: 10px;
 }
-.navbar {
-    font-size: 12pt;
+
+/* Стили для кнопки смены темы */
+#theme-toggle {
+    margin-top: 10px;
+}
+
+/* Стили для нижнего колонтитула */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    color: #212529;
+}
+
+body.dark-theme footer {
+    background-color: #40407a;
+    color: #ffffff;
+}
+
+footer p a {
+    color: #007bff;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .button-help {
+        right: 5px;
+        top: 80px;
+    }
+
+    .dropdown-menu {
+        top: 120px;
+    }
+
+    .help-pannel input {
+        margin-bottom: 10px;
+    }
 }
